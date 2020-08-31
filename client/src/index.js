@@ -1,0 +1,23 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './css/index.css';
+import * as serviceWorker from './serviceWorker';
+import AppRoutes from './routes';
+
+// React Time ago calculate 
+import JavascriptTimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+// React Time ago calculate 
+JavascriptTimeAgo.addLocale(en)
+
+ReactDOM.render(
+  <React.StrictMode>
+    <AppRoutes/>
+  </React.StrictMode>,
+  document.getElementById('root') 
+);
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
